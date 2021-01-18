@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(
+    90.78deg,
+    #56c0fc 0.08%,
+    #50aff9 34.95%,
+    #4999f6 69.82%,
+    #4388f3 100%
+  );
+}

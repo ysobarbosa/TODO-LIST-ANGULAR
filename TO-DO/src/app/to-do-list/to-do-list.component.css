@@ -1,0 +1,88 @@
+.grid {
+  display: grid;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.input {
+  height: 100%;
+  outline: none;
+  border: none;
+  font-size: 1.3em;
+  color: B5B5B5;
+  font-family: "Montserrat";
+}
+
+::placeholder {
+  font-size: 1em;
+  color: B5B5B5;
+  font-family: "Montserrat";
+}
+
+.input-button {
+  float: right;
+  height: 30px;
+  width: 70px;
+  background-color: #3c6ffb;
+  text-align: center;
+  top: -3px;
+  font-size: 18px;
+  line-height: 0px !important;
+}
+
+h1 {
+  margin: 30px 30px 60px 30px;
+  font-size: 38px;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+}
+
+.input-card {
+  max-height: 20px;
+  border-radius: 6px;
+  align-content: center;
+  margin-bottom: 60px;
+}
+.mat-card {
+  background-color: white;
+  color: grey;
+}
+
+.mat-divider {
+  border-top-color: #b7b7b7;
+  max-width: 92%;
+  margin-top: 3px;
+  margin-left: 3%;
+  margin-right: 5%;
+  margin-bottom: 30px;
+  align-self: center;
+}
+span {
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.mat-icon {
+  color: red;
+  position: absolute;
+}
+
+.tasks-card {
+  padding: 30px 15px 90px 18px;
+}
+
+.trash-icon {
+  height: 0px !important;
+  float: right;
+  line-height: 0%;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.mat-icon {
+  padding-bottom: 12px;
+}
+.mat-icon-button i,
+.mat-icon-button .mat-icon {
+  line-height: 19px;
+}

@@ -1,0 +1,27 @@
+<div>
+  <section class="grid">
+    
+    <h1>TO-DO LIST</h1>
+    
+    <mat-card class="input-card mat-elevation-z10">
+        <input class="input" placeholder="What do you want to do" type="text" [(ngModel)]="task.task" name="task">
+      <button mat-flat-button color="accent" class="input-button"  (click)="addTask()">ADD</button>
+    </mat-card>
+   
+    <mat-card class="tasks-card mat-elevation-z5" >
+      <div *ngFor="let item of tasks">
+        <div style="padding-top: 30px;"> 
+          <span>{{item.task}}</span> 
+          <button  class="trash-icon" mat-icon-button (click)="deleteTask(item)">
+            <mat-icon class="mat-icon">delete_outline</mat-icon>
+          </button>
+        </div>
+          <mat-divider class="mat-divider"></mat-divider>
+        
+        
+      </div>
+      
+    </mat-card>
+    
+  </section>
+</div>
