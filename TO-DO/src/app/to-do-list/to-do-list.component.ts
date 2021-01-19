@@ -27,7 +27,7 @@ export class ToDoListComponent implements OnInit {
 
   ngOnInit() {
     this._taskService.getTasks().subscribe((tasks) => {
-      tasks.sort((a, b) => +a.done - +b.done || a.task.localeCompare(b.task));
+      tasks.sort((a, b) => +b.done - +a.done || a.task.localeCompare(b.task));
       this.tasks = tasks;
     });
   }
@@ -42,12 +42,6 @@ export class ToDoListComponent implements OnInit {
   deleteTask(task) {
     this._taskService.deleteTask(task);
   }
-
-  // sortTasks() {
-  //   this.tasks.sort(
-  //     (a, b) => +a.done - +b.done || a.task.localeCompare(b.task)
-  //   );
-  // }
 
   setDone(task) {
     this._taskService.taskDone(task);
