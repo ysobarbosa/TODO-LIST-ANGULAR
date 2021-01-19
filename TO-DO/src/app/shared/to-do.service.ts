@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
 import { map } from 'rxjs/operators';
-import { Task } from './task';
 import {
   AngularFirestore,
   AngularFirestoreCollection,
   AngularFirestoreDocument,
 } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
+
+import { Task } from './task';
 
 @Injectable({
   providedIn: 'root',
@@ -33,7 +33,6 @@ export class ToDoService {
   }
 
   getTasks() {
-    console.log(this.tasksCollection);
     return this.tasks;
   }
 
@@ -43,5 +42,14 @@ export class ToDoService {
   deleteTask(task: Task) {
     this.taskDoc = this.db.doc(`to-do-list/${task.id}`);
     this.taskDoc.delete();
+  }
+
+  taskDone(task: Task) {
+    this.taskDoc = this.db.doc(`to-do-list/${task.id}`);
+    if (task.done == false) {
+      this.taskDoc.update({ done: true });
+    } else if (task.done == true) {
+      this.taskDoc.update({ done: false });
+    }
   }
 }

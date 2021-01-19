@@ -1,32 +1,12 @@
-.grid {
-  display: grid;
-  max-width: 400px;
-  margin: 0 auto;
-}
-.input {
-  height: 100%;
-  outline: none;
-  border: none;
-  font-size: 1.3em;
-  color: B5B5B5;
+section {
   font-family: "Montserrat";
+  padding: 0px;
 }
 
 ::placeholder {
   font-size: 1em;
   color: B5B5B5;
   font-family: "Montserrat";
-}
-
-.input-button {
-  float: right;
-  height: 30px;
-  width: 70px;
-  background-color: #3c6ffb;
-  text-align: center;
-  top: -3px;
-  font-size: 18px;
-  line-height: 0px !important;
 }
 
 h1 {
@@ -37,15 +17,54 @@ h1 {
   font-weight: 500;
 }
 
+span {
+  font-size: 16px;
+  margin-top: 15px;
+  font-weight: 500;
+  color: gray;
+}
+
+.grid {
+  display: grid;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
 .input-card {
   max-height: 20px;
-  border-radius: 6px;
+  border-radius: 7px;
   align-content: center;
   margin-bottom: 60px;
 }
-.mat-card {
-  background-color: white;
-  color: grey;
+
+.input {
+  height: 100%;
+  outline: none;
+  border: none;
+  font-size: 1.3em;
+  color: B5B5B5;
+  font-family: "Montserrat";
+}
+
+.input-button {
+  float: right;
+  height: 30px;
+  width: 70px;
+  background-color: #3c6ffb;
+  color: white;
+  text-align: center;
+  top: -3px;
+  font-size: 18px;
+  line-height: 0px !important;
+  text-transform: uppercase;
+}
+
+.tasks-card {
+  padding: 20px 15px 90px 18px;
+}
+
+.list {
+  padding-top: 40px;
 }
 
 .mat-divider {
@@ -57,18 +76,19 @@ h1 {
   margin-bottom: 30px;
   align-self: center;
 }
-span {
-  font-size: 16px;
-  margin-top: 15px;
+
+.task-done {
+  text-decoration: line-through;
+  position: unset;
 }
 
-.mat-icon {
-  color: red;
-  position: absolute;
+span > .icon-done {
+  color: green;
+  letter-spacing: 0%;
 }
 
-.tasks-card {
-  padding: 30px 15px 90px 18px;
+.item-done {
+  margin-left: 30px;
 }
 
 .trash-icon {
@@ -77,12 +97,18 @@ span {
   line-height: 0%;
   text-align: center;
   margin-right: 5px;
+  color: red;
 }
 
 .mat-icon {
-  padding-bottom: 12px;
+  position: absolute;
 }
+
 .mat-icon-button i,
 .mat-icon-button .mat-icon {
   line-height: 19px;
+}
+
+.material-icons {
+  line-height: 17px;
 }

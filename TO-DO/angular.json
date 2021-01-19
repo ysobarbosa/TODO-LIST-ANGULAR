@@ -19,6 +19,9 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
+            "allowedCommonJsDependencies": [
+              "angularfire2/firestore"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
