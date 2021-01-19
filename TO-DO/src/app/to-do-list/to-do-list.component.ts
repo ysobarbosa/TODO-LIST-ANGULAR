@@ -15,16 +15,20 @@ import { Task } from '../shared/task';
 export class ToDoListComponent implements OnInit {
   task: Task = {
     task: '',
+    done: false,
   };
 
   tasks: Task[];
+  editState: boolean = false;
+  itemToEdit: Task;
+  sortedTasks: Task[];
 
   constructor(private _taskService: ToDoService) {}
 
   ngOnInit() {
     this._taskService.getTasks().subscribe((tasks) => {
+      tasks.sort((a, b) => +a.done - +b.done || a.task.localeCompare(b.task));
       this.tasks = tasks;
-      console.log(this.tasks);
     });
   }
 
@@ -37,6 +41,18 @@ export class ToDoListComponent implements OnInit {
 
   deleteTask(task) {
     this._taskService.deleteTask(task);
-    console.log(task);
+  }
+
+  // sortTasks() {
+  //   this.tasks.sort(
+  //     (a, b) => +a.done - +b.done || a.task.localeCompare(b.task)
+  //   );
+  // }
+
+  setDone(task) {
+    this._taskService.taskDone(task);
+  }
+  unsetDone(task) {
+    this._taskService.taskDone(task);
   }
 }
