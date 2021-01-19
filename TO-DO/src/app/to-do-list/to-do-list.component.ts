@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { AngularFirestore } from '@angular/fire/firestore';
 
 import { ToDoService } from '../shared/to-do.service';
-import { AngularFireDatabase } from '@angular/fire/database';
 import { Task } from '../shared/task';
 
 @Component({
